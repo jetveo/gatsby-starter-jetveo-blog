@@ -39,7 +39,7 @@ const IndexPage: FC<Props> = ({ data }) => {
       </div>
       <div className="container">
         <div className="text-center">
-          <p dangerouslySetInnerHTML={{ __html: homePage.content }}></p>
+          <div dangerouslySetInnerHTML={{ __html: homePage.content }}></div>
         </div>
       </div>
       <LatestBlogs />

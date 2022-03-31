@@ -21,7 +21,7 @@ const PageTemplate: FC<Props> = ({ data }) => {
       <div className="site-About">
         <div className="container">
           <h2 dangerouslySetInnerHTML={{ __html: page.title }}></h2>
-          <p dangerouslySetInnerHTML={{ __html: page.content }}></p>
+          <div dangerouslySetInnerHTML={{ __html: page.content }}></div>
         </div>
       </div>
     </Layout>

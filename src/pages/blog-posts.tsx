@@ -50,9 +50,9 @@ const BlogPosts: FC = () => {
                     </strong>
                   </div>
                   {p.perex ? (
-                    <p dangerouslySetInnerHTML={{ __html: p.perex }}></p>
+                    <div dangerouslySetInnerHTML={{ __html: p.perex }}></div>
                   ) : (
-                    <p>No perex</p>
+                    <div>No perex</div>
                   )}
                 </div>
               </div>
