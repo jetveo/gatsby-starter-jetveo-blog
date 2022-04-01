@@ -1,13 +1,13 @@
-import { graphql, Link, useStaticQuery } from "gatsby";
 import React, { FC } from "react";
-import "../css/font-awesome.css";
-import "bootstrap/dist/css/bootstrap.css";
-import "../css/style.css";
+import { graphql, Link, useStaticQuery } from "gatsby";
 import { SettingModel } from "../models/setting-model";
 import { Image } from "../components/image";
 import { ImagePlaceholder } from "./image-placeholder/image-placeholder";
 import { MenuModel } from "../models/menu-model";
 import { UrlService as Url } from "../services/url-service";
+import "bootstrap/dist/css/bootstrap.css";
+import "../css/font-awesome.css";
+import "../css/style.css";
 
 const Header: FC = () => {
   const data = useStaticQuery<HeaderQuery>(query);

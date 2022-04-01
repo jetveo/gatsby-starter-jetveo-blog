@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i,600,700,700i&display=swap");
 
+:root {
+  --layout-main-bg-color: #333;
+}
+
 html {
   font-family: "Josefin Sans", sans-serif;
   -ms-text-size-adjust: 100%;
@@ -667,7 +671,7 @@ pre tt:after {
 /* header css */
 header.site-header {
   width: 100%;
-  background: #333333;
+  background: var(--layout-main-bg-color);
   z-index: 9;
   padding: 20px 0;
 }
@@ -717,7 +721,7 @@ header nav ul.navbar-nav li a {
 
 /* header css */
 footer.site-footer {
-  background: #333;
+  background: var(--layout-main-bg-color);
   padding: 0;
   text-align: center;
 }
