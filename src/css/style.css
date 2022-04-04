@@ -868,6 +868,10 @@ span.price {
   width: 100%;
   position: relative;
   margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 130px;
 }
 .site-Banner .Banner-details {
   position: absolute;
@@ -1080,6 +1084,7 @@ ul.latest-blog {
   list-style: none;
   display: flex;
   margin-bottom: 50px;
+  justify-content: center;
 }
 ul.latest-blog li {
   width: 33.33%;
@@ -1134,9 +1139,6 @@ ul.latest-blog li .inner a {
   top: 0;
   bottom: 0;
   z-index: 5;
-}
-.site-Banner .gatsby-image-wrapper {
-  height: 380px;
 }
 .Contact-us {
   margin: 40px 0;

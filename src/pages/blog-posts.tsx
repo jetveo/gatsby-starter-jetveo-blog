@@ -78,7 +78,7 @@ type BlogPostQuery = {
 
 export const query = graphql`
   query BlogPostsQuery {
-    allJetveoPosts {
+    allJetveoPosts(sort: {fields: createdAt, order: DESC}) {
       edges {
         node {
           id

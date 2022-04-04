@@ -76,7 +76,16 @@ export const query = graphql`
             slug
             title
             image {
-              ...AssetFragment
+              id
+              type
+              localFile {
+                id
+                name
+                publicURL
+                childImageSharp {
+                  gatsbyImageData(height: 380)
+                }
+              }
             }
           }
         }
