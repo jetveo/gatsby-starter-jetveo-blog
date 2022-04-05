@@ -24,7 +24,8 @@ const Header: FC = () => {
                 image={defaultSettings.headerImage}
                 alt="logo"
                 placeholder={<ImagePlaceholder />}
-                imageStyle={{ maxHeight: '40px', width: 'auto' }}
+                style={{ height: '100%', width: '100%' }}
+                imageStyle={{ objectFit: 'contain' }}
               />
             </Link>
           </div>

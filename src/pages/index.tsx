@@ -83,7 +83,7 @@ export const query = graphql`
                 name
                 publicURL
                 childImageSharp {
-                  gatsbyImageData(height: 380)
+                  gatsbyImageData(height: 330)
                 }
               }
             }
