@@ -19,6 +19,7 @@ const SEO: FC<SeoProps> = ({ description, lang, meta, keywords, title }) => {
     useStaticQuery<SeoQuery>(query).allJetveoSettings.edges[0].node;
   const metaDescription = description || defaultSettings.defaultMetaDescription;
   const metaKeywords = keywords || defaultSettings.defaultMetaKeywords;
+  const metaTitle = title || defaultSettings.defaultMetaTitle;
 
   const defaultMeta: React.DetailedHTMLProps<
     React.MetaHTMLAttributes<HTMLMetaElement>,
@@ -68,7 +69,7 @@ const SEO: FC<SeoProps> = ({ description, lang, meta, keywords, title }) => {
   return (
     <Helmet
       htmlAttributes={{ lang }}
-      title={title}
+      title={metaTitle}
       meta={defaultMeta.concat(meta || [])}
     />
   );
@@ -91,11 +92,11 @@ export const query = graphql`
     allJetveoSettings {
       edges {
         node {
-          defaultAuthor
+          author
           defaultMetaDescription
           defaultMetaKeywords
           id
-          defaultTitle
+          defaultMetaTitle
         }
       }
     }

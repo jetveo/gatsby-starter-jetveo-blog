@@ -24,7 +24,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
             metaKeywords
             slug
             title
-            perex
+            subtitle
             author {
               image {
                 id

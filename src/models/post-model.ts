@@ -6,7 +6,7 @@ export type PostState = "Draft" | "Public";
 export type PostModel = {
   id: string;
   title: string;
-  perex: string;
+  subtitle: string;
   content: string;
   metaDescription: string;
   metaKeywords: string;

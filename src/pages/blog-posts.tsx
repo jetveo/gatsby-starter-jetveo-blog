@@ -49,10 +49,10 @@ const BlogPosts: FC = () => {
                       {p.author.name} {p.author.surname}
                     </strong>
                   </div>
-                  {p.perex ? (
-                    <div dangerouslySetInnerHTML={{ __html: p.perex }}></div>
+                  {p.subtitle ? (
+                    <div dangerouslySetInnerHTML={{ __html: p.subtitle }}></div>
                   ) : (
-                    <div>No perex</div>
+                    <div>No subtitle</div>
                   )}
                 </div>
               </div>
@@ -89,7 +89,7 @@ export const query = graphql`
           metaTitle
           slug
           title
-          perex
+          subtitle
           image {
             ...AssetFragment
           }

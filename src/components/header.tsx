@@ -21,7 +21,7 @@ const Header: FC = () => {
           <div className="col-sm-12 col-md-4 align-self-center">
             <Link className="header-logo" to="/">
               <Image
-                image={defaultSettings.headerImage}
+                image={defaultSettings.logo}
                 alt="logo"
                 placeholder={<ImagePlaceholder />}
                 style={{ height: '100%', width: '100%' }}
@@ -72,7 +72,7 @@ export const query = graphql`
     allJetveoSettings {
       edges {
         node {
-          headerImage {
+          logo {
             ...AssetFragment
           }
         }

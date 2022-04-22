@@ -6,7 +6,7 @@ import { UrlService as Url } from "../services/url-service";
 const Footer: FC = () => {
   const queryResult = useStaticQuery<FooterQuery>(query);
   const menus = queryResult.allJetveoMenu.edges.map((e) => e.node);
-  const author = queryResult.allJetveoSettings.edges[0].node.defaultAuthor;
+  const author = queryResult.allJetveoSettings.edges[0].node.author;
   const year = new Date().getFullYear();
 
   return (
@@ -44,7 +44,7 @@ type FooterQuery = {
     edges: [
       {
         node: {
-          defaultAuthor: string;
+          author: string;
         };
       }
     ];
@@ -63,7 +63,7 @@ export const query = graphql`
     allJetveoSettings {
       edges {
         node {
-          defaultAuthor
+          author
         }
       }
     }

@@ -1078,6 +1078,9 @@ ul.blog-list li .post-item .post-details .post-title a {
   color: #333;
   font-size: 28px;
 }
+.latest-blog-container {
+  margin-top: 50px;
+}
 ul.latest-blog {
   margin: 0 -15px;
   padding: 0;
@@ -1099,47 +1102,26 @@ ul.latest-blog li .inner {
   -o-transition: box-shadow 0.2s;
   transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
 }
-ul.latest-blog li .inner:hover {
+ul.latest-blog li:hover .inner {
   -webkit-box-shadow: 0 10px 20px -6px rgba(0, 0, 0, 0.5);
   box-shadow: 0 10px 20px -6px rgba(0, 0, 0, 0.5);
 }
 ul.latest-blog li .gatsby-image-wrapper {
-  height: 200px;
+  height: 244px;
   width: 100%;
 }
 ul.latest-blog li h2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  z-index: 2;
-  color: #fff;
+  margin-top: 10px;
+  text-align: center;
 }
-ul.latest-blog li .inner:before {
-  content: "";
-  background: #0000004f;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
+ul.latest-blog li a {
+  color: #000;
+  text-decoration: none;
 }
-ul.latest-blog li h2 a {
-  color: #fff;
+ul.latest-blog li a:hover {
+  text-decoration: underline;
 }
-ul.latest-blog li .inner a {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: 5;
-}
+
 .Contact-us {
   margin: 40px 0;
 }

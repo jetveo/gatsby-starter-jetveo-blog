@@ -71,7 +71,7 @@ export const query = graphql`
       metaKeywords
       slug
       title
-      perex
+      subtitle
       author {
         image {
           ...AssetFragment

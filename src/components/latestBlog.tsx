@@ -11,21 +11,23 @@ const LatestBlogs: FC = () => {
 
   return (
     <div className="container">
-      <div className="text-center">
+      <div className="text-center latest-blog-container">
         <h2 className="with-underline">Latest Blogs</h2>
       </div>
       <ul className="latest-blog">
         {posts.map((p) => (
           <li key={p.id}>
-            <div className="inner">
-              <Link to={Url.blog(p.slug)}></Link>
-              <Image
-                image={p.image}
-                placeholder={<ImagePlaceholder />}
-                alt={p.metaTitle}
-              />
+            <Link to={Url.blog(p.slug)}>
+              <div className="inner">
+                <Link to={Url.blog(p.slug)}></Link>
+                <Image
+                  image={p.image}
+                  placeholder={<ImagePlaceholder />}
+                  alt={p.metaTitle}
+                />
+              </div>
               <h2 dangerouslySetInnerHTML={{ __html: p.title }}></h2>
-            </div>
+            </Link>
           </li>
         ))}
       </ul>
@@ -58,7 +60,7 @@ const query = graphql`
           metaTitle
           slug
           title
-          perex
+          subtitle
           image {
             ...AssetFragment
           }
