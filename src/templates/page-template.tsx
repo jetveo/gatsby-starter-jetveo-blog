@@ -40,9 +40,6 @@ export const query = graphql`
       content
       createdAt
       id
-      image {
-        ...AssetFragment
-      }
       metaDescription
       metaKeywords
       metaTitle

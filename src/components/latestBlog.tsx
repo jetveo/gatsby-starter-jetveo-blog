@@ -19,7 +19,6 @@ const LatestBlogs: FC = () => {
           <li key={p.id}>
             <Link to={Url.blog(p.slug)}>
               <div className="inner">
-                <Link to={Url.blog(p.slug)}></Link>
                 <Image
                   image={p.image}
                   placeholder={<ImagePlaceholder />}

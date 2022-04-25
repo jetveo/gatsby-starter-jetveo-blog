@@ -51,19 +51,6 @@ export const createPages: GatsbyNode["createPages"] = async ({
             content
             createdAt
             id
-            image {
-              id
-              type
-              localFile {
-                id
-                name
-                publicURL
-                childImageSharp {
-                  id
-                  gatsbyImageData
-                }
-              }
-            }
             metaDescription
             metaKeywords
             metaTitle

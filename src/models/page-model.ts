@@ -9,5 +9,4 @@ export type PageModel = {
   metaKeywords: string;
   metaTitle: string;
   createdAt: string;
-  image: ImageModel;
 };

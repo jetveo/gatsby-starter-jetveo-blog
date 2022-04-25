@@ -6,6 +6,7 @@ import { graphql } from "gatsby";
 import { PageModel } from "../models/page-model";
 import { Image } from "../components/image";
 import { ImagePlaceholder } from "../components/image-placeholder/image-placeholder";
+import { ImageModel } from "../models/image-model";
 
 type Props = {
   data: IndexQuery;
@@ -13,6 +14,7 @@ type Props = {
 
 const IndexPage: FC<Props> = ({ data }) => {
   const homePage = data.allJetveoMenu.edges[0].node.page;
+  const homePageImage = data.allJetveoSettings.edges[0].node.homePageImage;
 
   return (
     <Layout>
@@ -25,7 +27,7 @@ const IndexPage: FC<Props> = ({ data }) => {
         <div className="item">
           <div className="site-Banner">
             <Image
-              image={homePage.image}
+              image={homePageImage}
               placeholder={<ImagePlaceholder />}
               alt="home page"
             />
@@ -55,10 +57,19 @@ type IndexQuery = {
       {
         node: {
           page: PageModel;
-        };
+        }
       }
     ];
   };
+  allJetveoSettings: {
+    edges: [
+      {
+        node: {
+          homePageImage: ImageModel;
+        }
+      }
+    ]
+  }
 };
 
 export const query = graphql`
@@ -75,16 +86,22 @@ export const query = graphql`
             metaTitle
             slug
             title
-            image {
+          }
+        }
+      }
+    }
+    allJetveoSettings {
+      edges {
+        node {
+          homePageImage {
+            id
+            type
+            localFile {
               id
-              type
-              localFile {
-                id
-                name
-                publicURL
-                childImageSharp {
-                  gatsbyImageData(height: 330)
-                }
+              name
+              publicURL
+              childImageSharp {
+                gatsbyImageData(height: 330)
               }
             }
           }

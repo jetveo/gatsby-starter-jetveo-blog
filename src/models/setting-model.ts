@@ -8,4 +8,5 @@ export type SettingModel = {
   defaultMetaKeywords?: string;
   author: string;
   logo?: ImageModel;
+  homePageImage: ImageModel;
 };
