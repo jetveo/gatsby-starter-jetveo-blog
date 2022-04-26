@@ -13,6 +13,7 @@ const Header: FC = () => {
   const data = useStaticQuery<HeaderQuery>(query);
   const defaultSettings = data.allJetveoSettings.edges[0].node;
   const menus = data.allJetveoMenu.edges.map((n) => n.node);
+  const minOrder = menus.reduce((p, c) => p < c.order ? p : c.order, 0)
 
   return (
     <header className="site-header">
@@ -34,7 +35,7 @@ const Header: FC = () => {
               <ul className="navbar-nav mr-auto">
                 {menus.map((m) => (
                   <li key={m.id} className="nav-item active">
-                    <Link className="nav-link" to={Url.getUrlByMenu(m)}>
+                    <Link className="nav-link" to={Url.getUrlByMenu(m, minOrder)}>
                       {m.title}
                     </Link>
                   </li>
@@ -78,7 +79,7 @@ export const query = graphql`
         }
       }
     }
-    allJetveoMenu {
+    allJetveoMenu(sort: {order: ASC, fields: order}) {
       edges {
         node {
           id

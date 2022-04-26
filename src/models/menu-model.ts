@@ -4,7 +4,7 @@ export type MenuModel = {
   id: string;
   title: string;
   createdAt: Date;
-  order?: number;
+  order: number;
   page?: PageModel;
   url?: string;
 };

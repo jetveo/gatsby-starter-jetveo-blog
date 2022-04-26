@@ -5,8 +5,12 @@ class UrlServiceClass {
     return `/blog/${slug}`;
   }
 
-  public getUrlByMenu(menu: MenuModel) {
+  public getUrlByMenu(menu: MenuModel, minOrder: number) {
     if (menu) {
+      if (menu.order === minOrder) {
+        return "/"; // home page
+      }
+
       if (menu.url) {
         return menu.url;
       }
