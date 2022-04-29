@@ -30,7 +30,7 @@ const config: GatsbyConfig = {
       },
     },
     {
-      resolve: 'gatsby-source-jetveo',
+      resolve: '@jetveo/gatsby-source-jetveo',
       options: {
         apiBaseUrl: `${process.env.JETVEO_API_BASE_URL}`,
         apiKey: `${process.env.JETVEO_API_KEY}`,

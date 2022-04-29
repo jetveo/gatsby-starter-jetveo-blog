@@ -1,12 +1,16 @@
 {
-  "name": "my-gatsby-site",
-  "version": "1.0.0",
-  "private": true,
-  "description": "my-gatsby-site",
-  "author": "Václav Kudláček",
+  "name": "gatsby-starter-jetveo-blog",
+  "version": "1.0.1",
+  "description": "Gatsby site template with Jetveo backend",
+  "author": "Jetveo.io <info@jetveo.io>",
+  "license": "MIT",
   "keywords": [
     "gatsby"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jetveo/gatsby-starter-jetveo-blog.git"
+  },
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
@@ -16,6 +20,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@jetveo/gatsby-source-jetveo": "^1.0.1",
     "bootstrap": "^4.6.1",
     "gatsby": "^4.10.0",
     "gatsby-plugin-image": "^2.10.0",
@@ -24,7 +29,6 @@
     "gatsby-plugin-sharp": "^4.10.0",
     "gatsby-plugin-sitemap": "^5.10.0",
     "gatsby-source-filesystem": "^4.10.0",
-    "gatsby-source-jetveo": "^1.0.1",
     "gatsby-transformer-sharp": "^4.10.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
